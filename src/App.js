@@ -11,6 +11,9 @@ function App() {
     const buffer = Buffer.from(compressedData, 'base64');
     const decompressedData = zlib.inflateSync(buffer).toString('utf8');
     console.log(JSON.parse(decompressedData))
+    alert(decompressedData)
+    var JsonData = JSON.parse(decompressedData)
+    window.open(JsonData.link, '_blank');
 };
 
   return (
